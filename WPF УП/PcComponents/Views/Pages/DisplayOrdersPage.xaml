@@ -1,0 +1,86 @@
+﻿<Page x:Class="PcComponents.Views.Pages.DisplayOrdersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PcComponents.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DisplayOrdersPage" Loaded="Page_Loaded">
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.8*"></ColumnDefinition>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+  
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="0.8*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Vertical" Grid.Row="0">
+                    <TextBlock FontSize="24" FontWeight="Bold" Margin="10 10 0 0">Просмотр заказов</TextBlock>
+                <TextBlock x:Name="tbManager" FontSize="20" FontWeight="DemiBold" Margin="10 7 0 0">Баланин Эдуард Нураддинович</TextBlock>
+                <TextBlock  FontSize="20"  Margin="10 10 0 0" FontWeight="Bold">Список заказов</TextBlock>
+                </StackPanel>
+            <ListView x:Name="lvOrders" Grid.Row="1" Width="700" Margin="0 0 0 0" BorderBrush="Azure" BorderThickness="3" MouseDoubleClick="lvOrders_MouseDoubleClick">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.8*"></ColumnDefinition>
+                                <ColumnDefinition  Width="0.2*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Orientation="Vertical" Grid.Column="0" Width="520">
+                                <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
+                                    <TextBlock FontSize="18" Text="Номер заказа: "></TextBlock>
+                                    <TextBlock FontSize="18" Text="{Binding Order.Id}"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal"  Margin="10 0 0 0">
+                                    <TextBlock FontSize="18" Text="Дата оформления: "></TextBlock>
+                                    <TextBlock FontSize="18" Text="{Binding OrderCreationDate}"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal"  Margin="10 0 0 0">
+                                    <TextBlock FontSize="18" Text="Дата доставки: "></TextBlock>
+                                    <TextBlock FontSize="18" Text="{Binding OrderDeliveryDate}"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
+                                    <TextBlock FontSize="18" Text="Адрес пункта выдачи: "></TextBlock>
+                                    <TextBlock FontSize="18" Text="{Binding Order.Outpost.Address}" TextWrapping="Wrap" Width="500"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal"  Margin="10 0 0 0">
+                                    <TextBlock FontSize="18" Text="ФИО клиента: "></TextBlock>
+                                    <TextBlock FontSize="18" Text="{Binding Order.ClientFullName}"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal"  Margin="10 0 0 0">
+                                    <TextBlock FontSize="18" Text="Статус заказа: "></TextBlock>
+                                    <TextBlock FontSize="18" Text="{Binding Order.Status.Name}"></TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Grid.Column="1" VerticalAlignment="Center">
+                                <Button x:Name="btnEditOrder" Visibility="{Binding VisibilityState}" Tag="{Binding Order}"
+                                                VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Margin="20 0 20 0" Click="btnEditOrder_Click">
+                                    Изменить</Button>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+        <StackPanel Orientation="Vertical" Grid.Column="1">
+            <TextBlock FontSize="18" FontWeight="DemiBold"
+                           HorizontalAlignment="Center" Margin="0 20 0 0">Поиск по номеру заказа</TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Номер: " Margin="10 15 0 0" FontSize="18"></TextBlock>
+                <TextBox FontSize="18" x:Name="tbOrderId" TextChanged="tbOrderId_TextChanged"
+                           HorizontalAlignment="Center" Width="90" Margin="5 10 0 0"></TextBox>
+            </StackPanel>
+          
+        </StackPanel>
+    </Grid>
+</Page>

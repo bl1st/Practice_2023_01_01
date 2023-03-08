@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\appicon.ico" />
+    <None Remove="Resources\cart.png" />
+    <None Remove="Resources\catalogue.png" />
+    <None Remove="Resources\createProduct.png" />
+    <None Remove="Resources\logo.png" />
+    <None Remove="Resources\logout.png" />
+    <None Remove="Resources\noproduct.png" />
+    <None Remove="Resources\order.png" />
+    <None Remove="Resources\recreate.png" />
+    <None Remove="Views\recreate.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EasyCaptcha.Wpf" Version="0.9.0.3" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.7.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Properties\myicon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\appicon.ico" />
+    <Resource Include="Resources\cart.png" />
+    <Resource Include="Resources\catalogue.png" />
+    <Resource Include="Resources\createProduct.png" />
+    <Resource Include="Resources\logo.png" />
+    <Resource Include="Resources\logout.png" />
+    <Resource Include="Resources\noproduct.png" />
+    <Resource Include="Resources\order.png" />
+    <Resource Include="Resources\recreate.png" />
+    <Resource Include="Views\recreate.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models.Entities\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,114 @@
+﻿<Window x:Class="PcComponents.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PcComponents.Views"
+        mc:Ignorable="d"
+        Title="OOO 'Компьютерный мир'" Height="600" Width="1300"
+        Icon="pack://application:,,,/Resources/appicon.ico"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"  />
+            <ColumnDefinition Width="0.8*"  />
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="0"  Stroke="#D8BFD8" StrokeThickness="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7B68EE" Offset="2" />
+                    <GradientStop Color="White" Offset="10" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Grid.Column="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+
+                    <GradientStop Color="#E6E6FA" Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        
+        <StackPanel Grid.Column="0" Orientation="Vertical" Height="Auto">
+            
+            <Border BorderBrush="#9370DB" BorderThickness="1" Height="Auto">
+            <StackPanel Orientation="Horizontal" Width="Auto" Height="Auto" HorizontalAlignment="Left">
+                <Image Margin="5 5 0 0" 
+                       Source="pack://application:,,,/Resources/logo.png"
+                               Height="40" />
+                    <TextBlock Margin="5 0 0 0" HorizontalAlignment="left"  VerticalAlignment="Center"
+                             FontSize="25" FontWeight="SemiBold" Text="PcComponents">
+
+                </TextBlock>
+
+            </StackPanel>
+            </Border>
+
+            <Button Style="{StaticResource Flat}" Width="230" Click="ButtonCatalogue_Click" HorizontalAlignment="Left" Margin="5 5 0 0">
+                <StackPanel Orientation="Horizontal" Height="Auto" Width="230">
+                    <Image Margin="0 5 10 0" 
+                           Height="30" Opacity="0.7"
+                           Source="pack://application:,,,/Resources/catalogue.png"
+                    />
+                    <TextBlock  VerticalAlignment="Center" Margin="0 5 0 0" Height="Auto"
+                       FontSize="18"  Text="Каталог"  />
+
+                </StackPanel>
+            </Button>
+
+            <Button Style="{StaticResource Flat}" Width="230" Click="ButtonCart_Click" HorizontalAlignment="Left" Margin="5 5 0 0" x:Name="btnCart">
+                <StackPanel Orientation="Horizontal" Width="230" Height="Auto" HorizontalAlignment="Left">
+                    <Image Margin="0 5 10 0" 
+                           Height="30" Opacity="0.7"
+                           Source="pack://application:,,,/Resources/cart.png"
+                    />
+                    <TextBlock Margin="0 5 0 0" HorizontalAlignment="Center" 
+                       FontSize="18"  Text="Корзина"  x:Name="textBlockCart"/>
+                </StackPanel>
+            </Button>
+            <Button Style="{StaticResource Flat}" Width="Auto"  Margin="0 0 0 0"
+                    x:Name="btnCreateProduct" Click="btnCreateProduct_Click">
+                <StackPanel Orientation="Horizontal" Width="230" Height="Auto" HorizontalAlignment="Left">
+                    <Image Margin="0 5 10 0" 
+                           Height="30" Opacity="0.7"
+                           Source="pack://application:,,,/Resources/createProduct.png"
+                    />
+                    <TextBlock Margin="5 5 0 0" HorizontalAlignment="Center" 
+                        FontSize="18"  Text="Добавить товар"  
+                    />
+                </StackPanel>
+            </Button>
+            <Button Style="{StaticResource Flat}" Width="Auto" Margin="0 0 0 50"
+                    x:Name="btnOrdersPage" Click="btnOrdersPage_Click">
+                <StackPanel Orientation="Horizontal" Width="230" Height="Auto" HorizontalAlignment="Left">
+                    <Image Margin="0 5 10 0" 
+                           Height="25" Opacity="0.7"
+                           Source="pack://application:,,,/Resources/order.png"/>
+                    <TextBlock Margin="2 5 0 0" HorizontalAlignment="Center" 
+                        FontSize="18"  Text="Просмотр заказов"  
+                    />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="0" VerticalAlignment="Bottom" Orientation="Vertical">
+            <Button Style="{StaticResource Flat}" Width="Auto" DockPanel.Dock="Bottom" VerticalAlignment="Bottom" x:Name="btnExit" Click="btnExit_Click" HorizontalAlignment="Left">
+                <StackPanel Orientation="Horizontal" Width="230" Height="Auto" HorizontalAlignment="Left">
+                    <Image Margin="0 5 0 5" 
+                           Height="25" Opacity="0.7" 
+                            Source="pack://application:,,,/Resources/logout.png"
+                    />
+                    <TextBlock Margin="10 5 0 0" HorizontalAlignment="Center" 
+                        FontSize="18"  Text="Выход"  
+                               
+                    />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <Frame Grid.Column="1" x:Name="_NavigationFrame" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+</Window>

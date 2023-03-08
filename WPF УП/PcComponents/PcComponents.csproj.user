@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\CaptchaWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MainView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\AddProductPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\AdminProductPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\CataloguePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\DisplayOrdersPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\EditOrderInformation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\OrderInformationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\OrderPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\ProductInformationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\AuthorizationView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CaptchaWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\AddProductPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\AdminProductPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\CataloguePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\DisplayOrdersPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\EditOrderInformation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\OrderInformationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\OrderPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\ProductInformationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
