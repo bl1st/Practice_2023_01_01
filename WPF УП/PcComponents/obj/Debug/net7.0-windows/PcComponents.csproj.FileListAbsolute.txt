@@ -282,6 +282,9 @@ C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-window
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\AddProductPage.g.cs
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\AdminProductPage.g.cs
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\CataloguePage.g.cs
+C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\DisplayOrdersPage.g.cs
+C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\EditOrderInformation.g.cs
+C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\OrderInformationPage.g.cs
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\OrderPage.g.cs
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\ProductInformationPage.g.cs
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\App.g.cs
@@ -294,6 +297,9 @@ C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-window
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\AddProductPage.baml
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\AdminProductPage.baml
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\CataloguePage.baml
+C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\DisplayOrdersPage.baml
+C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\EditOrderInformation.baml
+C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\OrderInformationPage.baml
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\OrderPage.baml
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\ProductInformationPage.baml
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\PcComponents.g.resources
@@ -309,9 +315,3 @@ C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-window
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\PcComponents.pdb
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\PcComponents.genruntimeconfig.cache
 C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\ref\PcComponents.dll
-C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\DisplayOrdersPage.g.cs
-C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\DisplayOrdersPage.baml
-C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\OrderInformationPage.g.cs
-C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\OrderInformationPage.baml
-C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\EditOrderInformation.g.cs
-C:\Users\Eduard\Desktop\УП\01 01\WPF УП\PcComponents\obj\Debug\net7.0-windows\Views\Pages\EditOrderInformation.baml

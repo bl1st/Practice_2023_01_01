@@ -9,7 +9,7 @@ namespace PcComponents
 {
     public static class Helper
     {
-        public static PcComponentsDbWpfContext context = null!;
+        public static PcComponentsDbWpfContext context = new PcComponentsDbWpfContext();
         public static string UserRole = null!;
         public static string UserName = null!;
         public static byte[] NoImage = null!;
