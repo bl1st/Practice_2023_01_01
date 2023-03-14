@@ -1,0 +1,72 @@
+﻿<Page x:Class="PcComponents.Views.Pages.CataloguePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:PcComponents.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CataloguePage" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.8*"></ColumnDefinition>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <ListView x:Name="productList" Grid.Column="0" MouseDoubleClick="productList_MouseDoubleClick">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="600" Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.2*"/>
+                            <ColumnDefinition Width="0.6*"/>
+                            <ColumnDefinition Width="0.2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0" Source="{Binding ProductPicture}" Margin="10" Stretch="Uniform" Height="100" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+                        <StackPanel Orientation="Vertical" Grid.Column="1" Margin="10 0 0 0">
+                            <StackPanel Orientation="Vertical" Width="400">
+                                <TextBlock  TextWrapping="Wrap"  Text="{Binding Product.Name}" FontSize="20" FontWeight="DemiBold"></TextBlock>
+                            </StackPanel>
+                            <TextBlock Tag="{Binding Product.Id}" x:Name="tbProductid" Visibility="Collapsed"></TextBlock>
+                            <TextBlock Text="{Binding Category}" FontSize="16" ></TextBlock>
+                            <TextBlock Text="{Binding Path=Price, StringFormat='Цена: {0} руб'}" FontSize="16"></TextBlock>
+                            <TextBlock Text="{Binding Path=Product.Discount, StringFormat='Скидка: {0} %'}" FontSize="16" ></TextBlock>
+                            <TextBlock Text="{Binding Path=CostWithDiscount, StringFormat='Цена со скидкой: {0} руб.'}" FontSize="16"></TextBlock>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button Margin="5" Width="110" Height="30" Click="ButtonBuy_Click" Tag="{Binding Position}">
+                                <TextBlock>В корзину</TextBlock>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+      
+        <StackPanel Orientation="Vertical" Grid.Column="1">
+
+            <TextBlock Text="Найдено N продуктов" FontSize="20" FontWeight="DemiBold" Margin="0 20 0 0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="tbProductsCount"></TextBlock>
+
+            <TextBlock Text="Фильтр" FontSize="20" FontWeight="DemiBold" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            <TextBox Margin="0 10 0 5" Width="200" x:Name="textBlockProductName" FontSize="14" 
+                     materialDesign:HintAssist.Hint="Название товара" BorderThickness="2" TextChanged="textBlockProductName_TextChanged"                    
+                      BorderBrush="{DynamicResource MaterialDesignDivider}"                 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"            
+            />
+            <TextBlock Text="Категории:" FontSize="14"  Margin="10 10 10 5"></TextBlock>
+            <ComboBox Width="190" Margin="10" x:Name="cbCategories" SelectionChanged="cbCategories_SelectionChanged"></ComboBox>
+            <TextBlock Text="Фильтр по цене:" FontSize="14"  Margin="10 10 10 5"></TextBlock>
+            <RadioButton x:Name="rbCostAsc" GroupName="CostSort" Content="По возрастанию" IsChecked="True"  Margin="10 0 0 10" Checked="rbCostAsc_Checked"/>
+            <RadioButton x:Name="rbCostDesc" GroupName="CostSort" Content="По убыванию"  Margin="10 0 0 10" Checked="rbCostAsc_Checked" />
+            <TextBlock Text="Фильтр по скидке:" FontSize="14"  Margin="10 10 10 5"></TextBlock>
+            <ComboBox Width="200" Margin="10" x:Name="cbDiscounts" SelectionChanged="cbDiscounts_SelectionChanged"></ComboBox>
+
+        </StackPanel>
+
+
+    </Grid>
+</Page>

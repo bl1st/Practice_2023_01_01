@@ -1,0 +1,20 @@
+﻿PcComponents
+
+
+winexe
+C#
+.cs
+C:\Учеба\Курс 4\УП\Баланин493_УП_01_01\PcComponents\PcComponents\obj\Debug\net6.0-windows\
+PcComponents
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+C:\Учеба\Курс 4\УП\Баланин493_УП_01_01\PcComponents\PcComponents\App.xaml
+11-13143420
+
+361940486942
+232-423628865
+Views\AuthorizationView.xaml;Views\CaptchaWindow.xaml;Views\MainView.xaml;Views\Pages\AddProductPage.xaml;Views\Pages\AdminProductPage.xaml;Views\Pages\CataloguePage.xaml;Views\Pages\DisplayOrdersPage.xaml;Views\Pages\EditOrderInformation.xaml;Views\Pages\OrderInformationPage.xaml;Views\Pages\OrderPage.xaml;Views\Pages\ProductInformationPage.xaml;
+
+False
+

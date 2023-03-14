@@ -1,0 +1,36 @@
+﻿<Window x:Class="PcComponents.Views.CaptchaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:easy="clr-namespace:EasyCaptcha.Wpf;assembly=EasyCaptcha.Wpf"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+   
+        xmlns:local="clr-namespace:PcComponents.Views"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Title="CaptchaWindow" Height="450" Width="450">
+    <StackPanel Orientation="Vertical" Margin="40 100 40 100">
+        <easy:Captcha x:Name="MyCaptcha" Width="150" Height="150"/>
+        <StackPanel Orientation="Horizontal" Height="90" Width="250" HorizontalAlignment="Center">
+            <TextBox Margin="0 15 0 5" Width="200" x:Name="TextBlockCaptcha" FontSize="16"
+                     materialDesign:HintAssist.Hint="Капча" BorderThickness="2"     
+                     VerticalAlignment="Center"  KeyDown="OnKeyDownHandler"               
+                      BorderBrush="{DynamicResource MaterialDesignDivider}"                 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"               
+            />
+            <Button Style="{StaticResource Flat}" VerticalAlignment="Center" 
+                    Height="30" Width="30" Margin="20 10 0 0"
+                    Click="OnButtonRecreate_Click"
+                  
+            >
+                <Image Source="/Views/recreate.png">
+                    
+                </Image>
+                
+            </Button>
+        </StackPanel>
+        
+    </StackPanel>
+</Window>
